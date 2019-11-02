@@ -13,12 +13,19 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import {MoviesService} from './services/movies.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailsComponent } from './components/details/details.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { CommonnavCompComponent } from './components/commonnav-comp/commonnav-comp.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
     MoviesComponent,
+    DetailsComponent,
+    AdminComponent,
+    CommonnavCompComponent,
   ],
   imports: [
     BrowserModule,

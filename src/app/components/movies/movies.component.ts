@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {MoviesService} from '../../services/movies.service';
 import {Movie} from '../../models/movie';
 import {FetchService} from 'src/app/services/fetch.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
@@ -9,8 +11,12 @@ import {FetchService} from 'src/app/services/fetch.service';
 })
 export class MoviesComponent implements OnInit {
  movies: Movie[];
-  constructor(private fs: FetchService) { }
+  constructor(private fs: FetchService, private router: Router) { }
   jsonPath = 'assets/movies.json';
+
+  // showDetails(movie) {
+  //   this.router.navigate(['/details', { movie}]);
+  // }
   ngOnInit() {
     // this.moviesService.getMovies().subscribe(movies => {
     //   console.log(movies);
@@ -20,5 +26,9 @@ export class MoviesComponent implements OnInit {
       console.log(this.movies);
     });
   }
+  navigateToOtherComponent(data) {
+    localStorage.setItem('movie', data);
+    this.router.navigate(['src/app/components/details/details.component.ts']);
+    }
 
 }
