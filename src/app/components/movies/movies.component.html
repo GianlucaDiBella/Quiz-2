@@ -11,7 +11,6 @@
                             <h3 style="text-decoration: underline;" >{{movie.Title}}</h3>
                             <h5>Genre: {{movie.Genre}}</h5>
                             <h6>Language: {{movie.Language}}</h6>           
-                            <h6><a id="detalles" >About this movie</a></h6>
                             <button (Click)="navigateToOtherComponent(data)" [routerLink]="['/details']">Details</button>
                             </div>
                             </div>
@@ -37,7 +36,6 @@
                                         <h3 style="text-decoration: underline;" >{{movie.Title}}</h3>
                                         <h5>Genre: {{movie.Genre}}</h5>
                                         <h6>Language: {{movie.Language}}</h6>
-                                        <h6><a id="detalles" [routerLink]="['/details']">About this movie</a></h6>
                                 </div>
                                 <div class="seccionP">
                                         <div class="img-fluid">
