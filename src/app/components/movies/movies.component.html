@@ -1,6 +1,6 @@
 <h2 class="text-center">Cartelera Caracas</h2>
 <hr>
-<h3>Estrenos</h3>
+<h3>Premieres</h3>
 <hr>
         <div *ngFor="let movie of movies" class='collection'>
             <div *ngIf=!movie.ComingSoon>
@@ -8,11 +8,11 @@
                     <div class='conjuntoCompleto'>
                     <div class="seccionP">
                             <h3 style="text-decoration: underline;" >{{movie.Title}}</h3>
-                            <h5>Description: {{movie.Plot}}</h5>
+                            <h5>Genre: {{movie.Genre}}</h5>
                             <h6>Language: {{movie.Language}}</h6>
+                            <h6><a id="detalles">About this movie</a></h6>
                     </div>
                     <div class="seccionP">
-                        
                             <div class="img-fluid">
                             <img src="{{movie.Poster}}" class="rounded float-right" class="center" alt="{{movieTitle}}" height="210" width="210">
                         </div><br>
@@ -22,6 +22,30 @@
                 <hr>
                 </div>
             </div>
+            </div>
+            <hr>
+            <h3>Coming Soon</h3>
+            <hr>
+                    <div *ngFor="let movie of movies" class='collection'>
+                        <div *ngIf=movie.ComingSoon>
+                            <div class="container">
+                                <div class='conjuntoCompleto'>
+                                <div class="seccionP">
+                                        <h3 style="text-decoration: underline;" >{{movie.Title}}</h3>
+                                        <h5>Genre: {{movie.Genre}}</h5>
+                                        <h6>Language: {{movie.Language}}</h6>
+                                        <h6><a id="detalles">About this movie</a></h6>
+                                </div>
+                                <div class="seccionP">
+                                        <div class="img-fluid">
+                                        <img src="{{movie.Poster}}" class="rounded float-right" class="center" alt="{{movieTitle}}" height="210" width="210">
+                                    </div><br>
+                                </div>
+                                <hr>
+                            </div>
+                            <hr>
+                            </div>
+                        </div>
 <!-- <div *ngIf="movies?.lenght > 0;else noMovies">
 <ul *ngFor="let movie of movies" class='collection'>
     <li class='collection-movie'>{{movie.id}}</li>
