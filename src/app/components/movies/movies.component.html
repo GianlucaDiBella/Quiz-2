@@ -16,16 +16,13 @@
                             </div>
                     </div>
                     <div class="seccionP">
-                            <div class="img-fluid">
+                        
                             <img src="{{movie.Poster}}" class="rounded float-right" class="center" alt="{{movieTitle}}" height="210" width="210">
-                        </div><br>
+                    
                     </div>
-                    <hr>
                 </div>
-                <hr>
                 </div>
             </div>
-            <hr>
             <h3>Coming Soon</h3>
             <hr>
                     <div *ngFor="let movie of movies" class='collection'>
@@ -42,9 +39,7 @@
                                         <img src="{{movie.Poster}}" class="rounded float-right" class="center" alt="{{movieTitle}}" height="210" width="210">
                                     </div><br>
                                 </div>
-                                <hr>
                             </div>
-                            <hr>
                             </div>
                         </div>
 <!-- <div *ngIf="movies?.lenght > 0;else noMovies">
